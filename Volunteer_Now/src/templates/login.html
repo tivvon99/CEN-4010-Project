@@ -1,25 +1,197 @@
-{% extends "base.html" %}
-{% block content %}
-<div class="container-page-form">
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-        <div class="notification is-danger">
-            {{ messages[0] }}
-        </div>
-    {% endif %}
-    {% endwith %}
+<!-- templates/home.html -->
 
-    <form id="login-form" action="/login" method="post">
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" id="email" class="form-control" name="email">
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" class="form-control" name="password">
-        </div>
+<!DOCTYPE html>
+<html>
 
-        <button type="submit" class="btn btn-success btn-rounded">Login</button>
-    </form>
+<head>
+    <style>
+        body {
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to right, #333, #333);
+            background-color: #ffffff; /* You can change this to your preferred background color */
+            font-family: Arial, sans-serif
+        }
+
+        .container-page-form {
+            text-align: center;
+        }
+
+
+        h1 {
+            font-size: 55px;
+            top: 15%;
+            left: 36%;
+            position: absolute;
+
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+        }
+
+        input.form-control {
+
+            font-size: 30px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            margin-bottom: 50px;
+            margin-top: 20px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+        }
+        p1 {
+            position: absolute;
+            
+            margin-top: -49px;
+            margin-left: 40px;
+            color: #333;
+            
+            
+        }
+        label {
+
+            font-size: 40px;
+            font-weight: bold;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            margin-top: -50px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+        }
+
+        button.btn {
+            font-size: 40px;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px; /* Add rounded corners */
+            background-image: linear-gradient(to right, #667eea, #764ba2); /* Gradient background */
+            color: #333; /* White text color */
+            box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.3);
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-top: 50px; /* Push the button down by 50 pixels */
+            position: relative;
+            overflow: hidden;
+            font-weight: bold;
+            
+        }
+        header {
+            height: 90vh; /* Set the height to 20% of the viewport height */
+            position: absolute;
+            color: #fff;
+            margin-left: -1500px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif
+            padding-top: 30px; /* Optional: Add some top padding to center the content vertically */
+        }
+
+        /* Button hover effect */
+        button.btn:hover {
+            background-position: right center;
+            background-size: 200% auto;
+            animation: gradientAnimation 0.6s ease;
+        }
+
+        @keyframes gradientAnimation{
+            
+                background-position: 0 50%;
+            {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Footer Styles */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #fffff;
+            padding: 10px 0;
+            color: #ffffff;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            
+        }
+
+        .footer a {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+            text-align: center;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            
+        }
+        .footer a.register-link {
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            font-size: 20px;
+            position: absolute;
+            margin-left: -200px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+
+        }
+        .footer a.not-link {
+            margin-right: 1350px;
+
+        }
+        .image-container {
+            position: fixed;
+            margin-top: 200px;
+            left: 230px;
+            top: -150px;
+
+            z-index: -1; /* Set a negative z-index to place it behind other elements */
+        }
+    </style>
+</head>
+
+
+<header>
+VolunteerNow - Login
+</header>
+<div class="image-container">
+<img src="https://content.schoolinsites.com/api/documents/7b5b17ac081248c7a86162f78319a6c8.png" alt="Helping hands">
 </div>
-{% endblock %}
+    <div class="container-page-form">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+
+        <form id="login-form" action="/login" method="post">
+            <h1>VolunteerNow Login</h1>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <br>
+                <input type="text" id="email" class="form-control" name="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <br>
+                <input type="password" id="password" class="form-control" name="password">
+                <br>
+                <p1> <a href="#">Forgot Password?</a></p1>
+            </div>
+
+
+            <button type="submit" a href="#" class="btn btn-success btn-rounded">Login</button>
+        </form>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="#" >Home</a>
+        <a href="#" >About Us</a>
+        <a href="#" >Profile</a>
+        <a href="#" class="not-link">Volunteer Search</a>
+        <a href="#" class="register-link">Click here to Register</a>
+
+    </div>
+</body>
+</html>
