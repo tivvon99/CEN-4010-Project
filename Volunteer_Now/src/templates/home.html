@@ -1,13 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>VolunteerNow</title>
-</head>
-<body>
-    <h1>
-        Test
-    </h1>
-</body>
-</html>
+    <style>
+        body {
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(to right, #333, #333);
+            background-color: #ffffff; /* You can change this to your preferred background color */
+            font-family: Arial, sans-serif;
+        }
+        header{
+            height: 90vh; /* Set the height to 20% of the viewport height */
+            position: absolute;
+            color: #ffff;
+            margin-left: -1500px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            padding-top: 30px; /* Optional: Add some top padding to center the content vertically */
+        }
 
+        button.btn {
+            position: absolute;
+            font-size: 25px;
+            border: 2px solid #333; /* Add a solid border around the buttons */
+            padding: 12px 24px;
+            border-radius: 30px; /* Add rounded corners */
+            background-image: linear-gradient(to right, #667eea, #764ba2); /* Gradient background */
+            color: #333; /* White text color */
+            box-shadow: 2px 2px 5px rgba(50, 50, 50, 0.3);
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            margin-top: 550px; /* Push the button down by 50 pixels */
+            position: relative;
+            overflow: hidden;
+            font-weight: bold;
+            margin-right: 50px;
+            left: 10px;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+            min-width: 150px;
+            min-height: 150px
+        }
+        
+
+        button.btn:hover {
+            background-position: right center;
+            background-size: 200% auto;
+            animation: gradientAnimation 0.6s ease;
+        }
+        .button-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth; /* Add smooth scrolling effect */
+        padding: 20px; /* Optional: Add padding to space the buttons from the edge */
+        color:#ffffff
+        }
+        .feat-button {
+            position: absolute;
+            font-size: 30px;
+            z-index: 2;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            margin-top: 250px;
+
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+            color: #335;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            
+        }
+
+        .footer a {
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+            text-align: center;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            
+        }
+        .footer a.register-link {
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+            font-size: 20px;
+            position: absolute;
+            margin-left: -200px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+
+        }
+        .footer a.not-link {
+            margin-right: 1350px;
+
+        }
+        
+        .image-container {
+            position: absolute;
+            margin-top: -600px;
+            left: 300px;
+            lighting-color: #667eea;
+            background-color: #333;
+
+            z-index: -2; /* Set a negative z-index to place it behind other elements */
+        }
+        hr {
+            border: 2px solid #ffffff; /* Set the line color and width */
+            margin: 20px 0; /* Add some margin above and below the line */
+        }
+        .text-container {
+            position: absolute;
+            margin-top: -940px;
+            margin-left: -50px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            
+
+
+        }
+        .button-item {
+            position: absolute;
+            margin-top: 500px;
+            margin-left: -200px;
+        }
+
+
+
+        .form-container{
+            position: absolute;
+            margin-top: 50px;
+
+        }
+        .feat-form {
+            position: absolute;
+
+
+        }
+        label {
+
+            font-size: 30px;
+            font-weight: bold;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            margin-top;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+
+        }
+        input.form-control {
+
+            font-size: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            top: 15%;
+            margin-bottom: 100px;
+            margin-right: 800px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+}
+    </style>
+</head>
+
+<header>
+    VolunteerNow - Home
+    </header>
+
+
+<body>
+    <div class= "text-container">
+        <p1>
+            Find your next opportunity with our power search process that makes it easy to find good causes and inspire!
+            
+        </p1>
+    </div>
+    <div class="image-container">
+    <img src="https://images.vexels.com/content/148398/preview/united-world-with-hands-4da0a7.png" alt="Helping hands" style="height: 600px; width: 1250px;">
+    </div>
+
+<div class = "feat-form">
+    <form id="login-form" action="/search" method="post">
+        <div class="form-group">
+            <label for="companyN">Company Search:</label>
+            <br>
+            <input type="text" id="companyN" class="form-control" name="companyN">
+         </div>
+        <div class="form-group">
+             <label for="location">Location:</label>
+            <br>
+            <input type="text" id="location" class="form-control" name="location">
+            <br>
+        </div>
+    </form>
+</div>
+
+<div class = "feat-button">
+
+        <p1>Featured Organizations:</p1>
+
+</div>
+    <div class="button-container">
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+    <button type="submit" a href="#" class="btn btn-success btn-rounded">Coming Soon</button>
+
+        
+    </div>
+
+    <div class="footer">
+        <a href="#" >Login</a>
+        <a href="#" >About Us</a>
+        <a href="#" >Profile</a>
+        <a href="#" class="not-link">Volunteer Search</a>
+        <a href="#" class="register-link">Click here to Register</a>
+
+    </div>
+    <script>
+        const container = document.querySelector('.button-container');
+        let scrollPosition = 0;
+    
+        container.addEventListener('wheel', (event) => {
+            // Increase or decrease the scroll position based on the scroll event
+            scrollPosition += event.deltaY;
+    
+            // Apply the new scroll position to the container
+            container.scrollTo(scrollPosition, 0);
+        });
+    </script>    
+</body>
+
+</html>
