@@ -1,1 +1,1 @@
-web: gunicorn main:app --log-file=-
+web: gunicorn Volunteer_Now.src.app:app --log-file=-
