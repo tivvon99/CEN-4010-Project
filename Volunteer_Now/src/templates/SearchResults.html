@@ -1,1 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <title>VolunteerNow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #07ace8;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            padding-right: 10px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-button,
+        .filter-button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            background-color: #03d3f8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .results-table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        .results-table th,
+        .results-table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        .results-table th {
+            background-color: #f0f0f0;
+        }
+
+        .apply-now-button {
+            padding: 5px 10px;
+            background-color: #07ace8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title">Volunteer Now</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button class="search-button">Search</button>
+            <button class="filter-button">Filter</button>
+        </div>
+    </header>
+
+    <table class="results-table">
+        <tr>
+            <th>#</th>
+            <th>Organization</th>
+            <th>Distance & Address</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>
+                <div>Helping Hands</div>
+                <div>"Helping hands gives assisstance on shelters to help our community."</div>
+            </td>
+            <td>
+                <div>25 miles</div>
+                <div>From your home address.</div>
+                <button class="apply-now-button">Apply Now</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <div>Collection Taskforce </div>
+                <div>"Keeping our city clean is our priority."</div>
+            </td>
+            <td>
+                <div>5 miles</div>
+                <div>From your home address.</div>
+                <button class="apply-now-button">Apply Now</button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+                <div>Friends of the community </div>
+                <div>"Focus on helping the elder community!"</div>
+            </td>
+            <td>
+                <div>12 miles</div>
+                <div>From your home address.</div>
+                <button class="apply-now-button">Apply Now</button>
+            </td>
+        </tr>
+        <!-- Add more rows here -->
+    </table>
+
+</body>
+
+</html>
