@@ -57,5 +57,5 @@ def register_user():
     return render_template('profile.html', email=session['email'])
 
 
-if __name__ == '__main__':
-    app.run(port=4995, debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
