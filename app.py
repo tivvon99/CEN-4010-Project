@@ -2,9 +2,8 @@
 The main application file for server
 '''
 
-import database
-import user
-
+from database import Database
+from user import User
 from flask import Flask, render_template, request, session, make_response, url_for, redirect
 
 

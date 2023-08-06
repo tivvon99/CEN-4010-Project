@@ -1,6 +1,6 @@
 import uuid
 import datetime
-import database
+from database import Database
 
 class Opportunities(object):
     def __init__(self, creator, title, description, creator_id, _id=None):
