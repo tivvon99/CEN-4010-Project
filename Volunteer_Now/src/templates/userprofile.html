@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <title>VolunteerNow</title>
+    <style>
+        
+        .user-profile-container {
+            display: flex;
+            margin-top: 150px;
+            padding: 20px;
+            align-items: center;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-right: 40px;
+        }
+
+        .user-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #07ace8;
+            /* Add user's picture as background-image here */
+        }
+
+        .user-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .notifications {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #07ace8;
+            color: #fff;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+
+        .announcements-container {
+            margin-top: 20px;
+            border: 2px solid rgb(2, 80, 136);
+            width: 60%;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+        }
+
+        .tab-container {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+
+        .tab {
+            padding: 8px 16px;
+            background-color: #07ace8;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .tab.active {
+            background-color: #07ace8;
+        }
+        
+        .bottom-window-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .upcoming-shifts-container {
+            width: 60%;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 2px solid rgb(2, 80, 136);
+            padding: 10px;
+        }
+
+        .upcoming-shifts-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-y: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+        .user-settings-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #07ace8;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="button-item">
+            <button class="btn"style="background-color: #03d3f8;">Home</button>
+            <button class="btn">Search</button>
+            <button class="btn">Messages</button>
+            <button class="btn">Schedule</button>
+            <button class="btn">Settings</button>
+            <button class="btn">Logout</button>
+        </div>
+    </header>
+
+    <!-- User Profile Section -->
+    <div class="user-profile-container">
+        <!-- User Picture and Name on the left side -->
+        <div class="user-info">
+            <div class="user-picture"\n></div>
+            <p class="user-name">Full name</p>
+        </div>
+
+        <!-- Scrolling Announcements in the middle -->
+        <div class="announcements-container">
+            <div class="tab-container">
+                <div class="tab active">Announcements</div>
+                
+            </div>
+            <div class="announcements">
+                <p>Congratulations on the new account please verify your email.</p>
+                <p>Your password has expired, please reset your password.</p>
+                <p>GlobalHelp is now looking for volunteers!!!</p>
+                <p>FAU replied to your message regarding your experience records.</p>
+                <p>HUGE! update coming next month , be prepared!.</p>
+                <p>Your requested shift got approved please review the details.</p>
+                <p>You called off to an upcoming shift, please contact the organization.<p>
+                <!-- Add more announcements here with the same format -->
+            </div>
+        </div>
+
+        <!-- Notifications on the right side, number can be any -->
+        <div class="notifications">New Notifications: 5</div>
+    </div>
+
+    <!-- Upcoming Shifts Section -->
+    <div class="bottom-window-container">
+        <div class="upcoming-shifts-container">
+            <h2 class="upcoming-shifts-title">Upcoming Shifts </h2>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Date</th>
+                        <th>Shift</th>
+                        <th>Location</th>
+                    </tr>
+                    <tr>
+                        <td>August 09, 2023</td>
+                        <td>Morning Shift</td>
+                        <td>Park Cleanup</td>
+                    </tr>
+                    <tr>
+                        <td>August 12, 2023</td>
+                        <td>Afternoon Shift</td>
+                        <td>Food Drive</td>
+                    </tr>
+                    <tr>
+                        <td>August 13, 2023</td>
+                        <td>Morning Shift</td>
+                        <td>Park Cleanup</td>
+                    </tr>
+                    <tr>
+                        <td>August 13, 2023</td>
+                        <td>Evening Shift</td>
+                        <td>Public Beach Cleanup</td>
+                    </tr>
+                    <tr>
+                        <td>August 21, 2023</td>
+                        <td>Afternoon Shift</td>
+                        <td>Elder Caretaker</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="user-settings-button">User Settings</div>
+
+   
+</body>
+
+</html>
