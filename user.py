@@ -1,7 +1,7 @@
 import datetime
 import uuid
 from flask import session
-from common.database import Database
+import database
 
 class User(object):
     def __init__(self, email, password, _id=None):
