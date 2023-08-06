@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VolunteerNow</title>
+    <style>
+       
+        .combined-section {
+            position: absolute;
+            top: 150px;
+            left: 20%;
+            width: 60%; /* adjust the width */
+            height: 70vh; /* adjust the height */
+            background-color: #ffffff;
+            border: 2px solid #333;
+            display: flex;
+        }
+
+        /* section for the messages received */
+        .messages-container {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+            border-right: 2px solid #333;
+            overflow-y: scroll;
+        }
+
+        .user-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #07ace8;
+            color: #fff;
+            font-size: 20px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        /*  section for the opened message */
+        .message-section {
+            width: 82%; /* Adjust the width */
+            padding: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .reply-input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .reply-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px; /*  adjust padding to make buttons smaller */
+            background-color: #f0f0f0;
+        }
+
+        .reply-buttons button {
+            padding: 5px 10px; /* adjust padding to make buttons smaller */
+            font-size: 12px; /* adjust font size to mkae font smaller */
+            background-color: #07ace8;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 5px; /* space between buttons */
+        }
+
+        .reply-buttons button:hover {
+            background-color: #764ba2;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="button-item">
+            <button class="btn">Home</button>
+            <button class="btn">Search</button>
+            <button class="btn" style="background-color:#03d3f8;">Messages</button>
+            <button class="btn">Schedule</button>
+            <button class="btn">Settings</button>
+            <button class="btn">Logout</button>
+        </div>
+    </header>
+
+    <div class="combined-section">
+        <!-- Left side (messages) -->
+        <div class="messages-container">
+            <div onclick="scrollToMessage('message1')">
+                <div class="user-icon">AB</div>
+                <!--<p><strong> full name </strong></p>-->
+                <p>Date: 08/01/2023</p>
+                <hr>
+                <p>Hi , after reviweing your profile i would like to speak with you.</p>
+            </div>
+            <div onclick="scrollToMessage('message2')">
+                <div class="user-icon">JG</div>
+                <!--<p><strong> full name </strong></p> -->
+                <p>Date: 07/28/2023</p>
+                <hr>
+                <p>Hey!!, your experinces matches to what we look for ,please reply. <p>
+            </div>
+            <div onclick="scrollToMessage('message3')">
+                <div class="user-icon">PW</div>
+                <!--<p><strong> full name </strong></p> -->
+                <p>Date: 07/26/2023</p>
+                <hr>
+                <p>Hi, unfortunately we don't have any spot available.</p>
+            </div>
+            <div onclick="scrollToMessage('message4')">
+                <div class="user-icon">EB</div>
+                <!--<p><strong> full name </strong></p> in case you want to show the entire name-->
+                <p>Date: 06/30/2023</p>
+                <hr>
+                <p>Hi, we recieved your application but we are missing your...</p>
+            </div>
+            <!-- Add more messages here -->
+        </div>
+        <!-- Right side (specific message and reply) -->
+        <div class="message-section">
+            <div id="message1">
+                <div class="user-icon">AB</div>
+                <p><strong>Alice Brown</strong></p>
+                <p>Date: June 30, 2023</p><!--full date only displayed when selected, along with complete message-->
+                <hr>
+                <p>Hi, we received your application but we are missing your experience </n> information please attach the a file of your experience so we can proceed.</p>
+            </div>
+            
+
+            
+            <input type="text" class="reply-input" placeholder="Type your reply..."> <!--full reply box and the buttons below it-->
+            <div class="reply-buttons">
+                <button>Reply</button>
+                <button>Add Photo</button>
+                <button>Add Emoji</button>
+                <button>Add File</button>
+            </div>
+        </div>
+    </div>
+
+    <!--if you want to implement java this could be a start if not delete-->
+
+    <script>
+        function scrollToMessage(messageId) {
+            const element = document.getElementById(messageId);
+            element.scrollIntoView();
+        }
+    </script>
+</body>
+</html>

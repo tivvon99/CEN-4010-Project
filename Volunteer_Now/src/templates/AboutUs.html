@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <style>
+        
+
+     body {
+        position: relative;
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to right, #333, #333);
+        background-color: #ffffff; /* You can change this to your preferred background color */
+        font-family: Arial, sans-serif
+    }
+
+    .container-page-form {
+        text-align: center;
+    }
+
+
+    h1 {
+        font-size: 55px;
+        top: 15%;
+        left: 40%;
+        position: absolute;
+
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+        background-image: linear-gradient(to right, #667eea, #764ba2);
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+    }
+
+    input.form-control {
+
+        font-size: 30px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        margin-bottom: 50px;
+        margin-top: 20px;
+        background-image: linear-gradient(to right, #667eea, #764ba2);
+    }
+    p1 {
+        position: absolute;
+        
+        margin-top: -49px;
+        margin-left: 40px;
+        color: #333;
+        
+        
+    }
+    label {
+
+        font-size: 40px;
+        font-weight: bold;
+        background-image: linear-gradient(to right, #667eea, #764ba2);
+        margin-top: -50px;
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+
+    }
+
+    button.btn {
+        font-size: 40px;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 30px; /* Add rounded corners */
+        background-image: linear-gradient(to right, #667eea, #764ba2); /* Gradient background */
+        color: #333; /* White text color */
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Smooth transition on hover */
+        margin-top: 50px; /* Push the button down by 50 pixels */
+        position: relative;
+        overflow: hidden;
+        font-weight: bold;
+        
+    }
+    .text-container {
+            font-size: 20px;
+            position: absolute;
+            margin-top: -600px;
+            margin-left: -1350px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            max-width: 450px;
+            min-height: 300px;
+            text-align: center;
+            text-shadow: #4b55a2;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+    }
+    .text-container2 {
+        font-size: 20px;
+            position: absolute;
+            margin-top: -600px;
+            margin-left: 1300px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            max-width: 450px;
+            min-height: 300px;
+            text-align: center;
+            text-shadow: #4b55a2;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+
+    }
+    .text-container3 {
+        font-size: 20px;
+            position: absolute;
+            margin-top: -1100px;
+            margin-left: 1350px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            max-width: 400px;
+            min-height: 50px;
+            text-align: center;
+            text-shadow: #4b55a2;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+    }
+    .text-container4 {
+        font-size: 20px;
+            position: absolute;
+            margin-top: -1100px;
+            margin-left: -1350px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            max-width: 400px;
+            min-height: 50px;
+            text-align: center;
+            text-shadow: #4b55a2;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+    }
+    .text-container5 {
+        font-size: 20px;
+            position: absolute;
+            margin-top: 1175px;
+            margin-left: -600px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            max-width: 400px;
+            min-height: 50px;
+            text-align: center;
+            text-shadow: #4b55a2;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+    }
+
+    .text-container6 {
+        font-size: 20px;
+            position: absolute;
+            margin-top: 500px;
+            margin-left: 1350px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            max-width: 450px;
+            min-height: 300px;
+            text-align: center;
+            text-shadow: #4b55a2;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+    }
+    .text-container7 {
+        font-size: 20px;
+            position: absolute;
+            margin-top: 500px;
+            margin-left: -1350px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            max-width: 450px;
+            min-height: 300px;
+            text-align: center;
+            text-shadow: #4b55a2;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+    }
+    .text-container8 {
+        font-size: 20px;
+            position: absolute;
+            margin-top: 0px;
+            margin-left: 1350px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            max-width: 400px;
+            min-height: 50px;
+            text-align: center;
+            text-shadow: #4b55a2;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+    }
+    .text-container9 {
+        font-size: 20px;
+            position: absolute;
+            margin-top: 0px;
+            margin-left: -1350px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            max-width: 400px;
+            min-height: 50px;
+            text-align: center;
+            text-shadow: #4b55a2;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+    }
+    
+
+    .ab {
+
+    font-size: 65px;
+    top: -1%;
+    left: 15%;
+    position: absolute;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+    background-image: linear-gradient(to right, #667eea, #764ba2);
+    min-width: 1000px;
+
+
+    }
+    header {
+        height: 125vh; /* Set the height to 20% of the viewport height */
+        position: absolute;
+        color: #fff;
+        margin-left: -1625px;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif
+        padding-top: 30px; /* Optional: Add some top padding to center the content vertically */
+        margin-top: -10px;
+    }
+
+    /* Button hover effect */
+    button.btn:hover {
+        background-position: right center;
+        background-size: 200% auto;
+        animation: gradientAnimation 0.6s ease;
+    }
+
+
+    @keyframes gradientAnimation{
+        
+            background-position: 0 50%;
+        {
+            background-position: 100% 50%;
+        }
+    }
+
+    /* Footer Styles */
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #fffff;
+        padding: 10px 0;
+        color: #ffffff;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        
+    }
+
+    .footer a {
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+        color: #333;
+        text-decoration: none;
+        margin: 0 10px;
+        text-align: center;
+        background-image: linear-gradient(to right, #667eea, #764ba2);
+        
+    }
+    .footer a.register-link {
+        font-weight: bold;
+        position: relative;
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+        font-size: 20px;
+        position: absolute;
+        margin-left: -250px;
+        background-image: linear-gradient(to right, #667eea, #764ba2);
+
+    }
+    .footer a.not-link {
+        position: relative;
+        margin-right: 1400px;
+
+    }
+    .image-container {
+        position: absolute;
+        margin-top: 200px;
+        left: 540px;
+        top: -100px;
+        height: 150px;
+        width: 200px;
+        lighting-color: #667eea;
+
+        z-index: -1; /* Set a negative z-index to place it behind other elements */
+    }
+    .text-container-contact {
+        font-size: 20px;
+            position: relative;
+            margin-top: 1200px;
+            margin-left: -40px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            min-width: 400px;
+            min-height: 50px;
+            text-align: center;
+            text-shadow: #4b55a2;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
+
+    }
+
+</style>
+
+    <!-- ... (head section with styles) ... -->
+</head>
+<header>
+    VolunteerNow - AboutUs
+</header>
+<body>
+    <div class="image-container">
+        <img src="https://corkpsychotherapyandtraumacentre.ie/wp-content/uploads/2020/06/family-photo.jpg" alt="Helping hands" style="height: 550px; width: 750px;">
+        
+    </div>
+
+    <div class="text-container">
+        <p>
+            Have you grown tired of trudging through multiple other volunteer sites looking for the right opportunity? VounteerNow is the one stop site for all your needs relating to bettering your community. VolunteerNow's user-friendly platform empowers volunteers to easily find the perfect opportunity to make a positive impact in their community, saving them valuable time and effort. New visitors looking for their first volunteer opportunity and experienced volunteers will enjoy our suite of quality-of-life features that are all built directly into the system; no third-party app download or site redirects required. Our team is committed to making the process convenient so volunteers can spend more time doing what they love.
+        </p>
+    </div>
+    <div class="text-container2">
+        <p>
+            We are designing a powerful system that functions as an all-in-one service that will benefit both potential future volunteers and the organizations that depend on them. Volunteers will have access to our powerful search that will allow them to connect with thousands of organizations across the country and be able to filter by their skills and personal preferences which maximize the possibility of finding the right organization to make a difference. Once a suitable opportunity is found, volunteers will be able to become members and apply right from the opportunity page. Even if a volunteer can’t find an opportunity to their preferences, they have the unique ability to make a post with their skills and availability included for organizations to see.
+
+        </p>
+    </div>
+    <div class="text-container3">
+        <p>
+            Volunteer Search
+        </p>
+    </div>
+    <div class="text-container4">
+        <p>
+            Product Summary
+        </p>
+    </div>
+    <div class="text-container5">
+        <p>
+            Contact Us!
+        </p>
+    </div>
+    <div class="text-container6">
+        <p>
+            Contact Us!
+        </p>
+    </div>
+    <div class="text-container7">
+        <p>
+            Contact Us!
+        </p>
+    </div>
+    <div class="text-container8">
+        <p>
+            Contact Us!
+        </p>
+    </div>
+    <div class="text-container9">
+        <p>
+            Contact Us!
+        </p>
+    </div>
+<div class = "ab">
+    <h1>
+       About Our Mission
+    </h1>
+</div>
+<div class="text-container-contact">
+    <p>
+        Contact us for any inquiries or support:<br>
+        Email: info@volunteernow.com<br>
+        Phone: +1 (800) 123-4567
+    </p>
+</div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="#" >Home</a>
+        <a href="#" >About Us</a>
+        <a href="#" >Login</a>
+        <a href="#" class="not-link">Volunteer Search</a>
+        <a href="#" class="register-link">Click here to Register</a>
+
+    </div>
+
+</body>
+</html>

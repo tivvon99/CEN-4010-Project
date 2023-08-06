@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to right, #333, #333);
+            background-color: #ffffff; /* You can change this to your preferred background color */
+            font-family: Arial, sans-serif
+
+        }
+
+        header {
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            
+        }
+
+        .title {
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            color: #333;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            background-image: linear-gradient(to right, #333, #333);
+            color: #333;
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            padding-right: 10px;
+        }
+
+        input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-button,
+        .filter-button {
+
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            color: #333;
+            margin-left: 5px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .results-table {
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            color: #333;
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        .results-table th,
+        .results-table td {
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+
+        .results-table th {
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            color: #333;
+        }
+
+        .apply-now-button {
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            padding: 5px 10px;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer a {
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+            text-align: center;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+            
+        }
+        .footer a.register-link {
+            font-weight: bold;
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+            font-size: 20px;
+            margin-left: -200px;
+            background-image: linear-gradient(to right, #667eea, #764ba2);
+
+
+
+        }
+        .footer a.not-link {
+            margin-right: 1350px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="title">VolunteerNow - Search</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button class="search-button">Search</button>
+            <button class="filter-button">Filter</button>
+        </div>
+    </header>
+
+    <table class="results-table">
+        <tr>
+            <th>#</th>
+            <th>Organization</th>
+            <th>Distance & Address</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>
+                <div>Helping Hands</div>
+                <div>"Helping hands gives assisstance on shelters to help our community."</div>
+            </td>
+            <td>
+                <div>25 miles</div>
+                <div>From your home address.</div>
+                <button class="apply-now-button">Apply Now</button>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <div>Collection Taskforce </div>
+                <div>"Keeping our city clean is our priority."</div>
+            </td>
+            <td>
+                <div>5 miles</div>
+                <div>From your home address.</div>
+                <button class="apply-now-button">Apply Now</button>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+                <div>Friends of the community </div>
+                <div>"Focus on helping the elder community!"</div>
+            </td>
+            <td>
+                <div>12 miles</div>
+                <div>From your home address.</div>
+                <button class="apply-now-button">Apply Now</button>
+            </td>
+        </tr>
+
+    </table>
+
+        <!-- Footer -->
+        <div class="footer">
+            <a href="#" >Home</a>
+            <a href="#" >About Us</a>
+            <a href="#" >Profile</a>
+            <a href="#" class="not-link">Login</a>
+            <a href="#" class="register-link">Click here to Register</a>
+
+</body>
+
+</html>
