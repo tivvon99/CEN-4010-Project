@@ -14,8 +14,6 @@ app.secret_key = "Nuggets"
 @app.route('/')
 def home_template():
     return render_template('home.html')
-
-
         
 @app.route('/login')
 def login_template():
@@ -26,11 +24,25 @@ def login_template():
 def register_template():
     return render_template('register.html')
 
+@app.route('/aboutus')
+def aboutus_template():
+    return render_template('AboutUs.html')
+
+@app.route('/usermessage')
+def usermessage_template():
+    return render_template('usermessage.html')
+
+@app.route('/searchresults')
+def searchresults_template():
+    return render_template('SearchResults.html')
+
+@app.route('/userprofile')
+def userprofile_template():
+    return render_template('userprofile.html')
 
 @app.before_first_request
 def initialize_database():
     Database.initialize()
-
 
 @app.route('/login', methods=['POST'])
 def login_user():
